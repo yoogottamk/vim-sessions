@@ -1,7 +1,9 @@
-"  Basic vim settings {{{
+"  Basic vim settings
 set nu rnu
 
+" set backspace properly
 set backspace=indent,eol,start
+
 " update file if content changed outside
 set autoread
 
@@ -25,15 +27,13 @@ set undolevels=999 history=999
 set noshowmode
 set showcmd
 
-set laststatus=2
-set shortmess+=I
-
 " show splits on the right and below
 set spr sb
 
 " for spellings
 nnoremap <F7> :setlocal spell! spelllang=en<CR>
-nnoremap <F6> :Termdebug %:r<CR>
+
+" auto correct spelling mistakes by pressing CTRL-L
 inoremap <C-l> <c-g>u<Esc>[s1z=`]a<c-g>u
 
 " for split navigation
@@ -41,10 +41,6 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
-
-" fzf
-nnoremap <F2> :Buffers<cr>
-nnoremap <leader>o :Files<cr>
 
 " move (selected) line(s) up or down
 nnoremap <silent> + :m .+1<CR>==
