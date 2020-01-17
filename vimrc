@@ -4,6 +4,9 @@ set nu rnu
 " set backspace properly
 set backspace=indent,eol,start
 
+filetype plugin indent on
+syntax on
+
 " update file if content changed outside
 set autoread
 
@@ -12,14 +15,17 @@ set nobackup noswapfile nowb
 
 set autoindent smartindent
 
+" set tab to insert 4 spaces
 set expandtab
 set smarttab
 set shiftwidth=4
 set tabstop=4
 set softtabstop=4
 
+" show what you are searching
 set hlsearch
 set incsearch
+
 set ignorecase smartcase
 
 set undolevels=999 history=999
